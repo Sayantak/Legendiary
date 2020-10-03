@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'LegenDiary',
       theme: ThemeData(
-        brightness: Brightness.dark,
+        brightness: Brightness.light, //Chnaged the theme
       ),
       home: HomePage(),
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true, //Brought back the banner for debugging the extra functionality
       initialRoute: HomePage.id,
       routes: {
         ScribblePage.id: (context) => ScribblePage(),
@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
         QuotePage.id: (context) => QuotePage(),
         ToDoPage.id: (context) => ToDoPage(),
         VideoPage.id: (context) => VideoPage(),
+        AudioBookPage.id: (context => AudioBookPage()), //Added the extra functionality
       },
     );
   }
